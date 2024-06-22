@@ -69,14 +69,15 @@ The analysis utilizes two datasets:
 ## Modeling and Results
 
 ### Models Used
-- **Logistic Regression**: A model that predicts the probability of a binary outcome using input features.
-- **Support Vector Machine (SVM)**: A model that finds the hyperplane that best separates the classes in the feature space.
+- **Random Forest**
+- **K-Nearest Neighbors**
+- **Logistic Regression**
+- **Decision Tree**
 
 ### Performance Metrics
 - Accuracy
 - Precision
 - Recall
-- F1-Score
 - Confusion Matrix
 
 ### Results
