@@ -1,99 +1,77 @@
-# Comparative Analysis of Obesity Dataset
+# Obesity Dataset Analysis
 
-## Introduction
+## Overview
 
-### Project Overview
-This project provides a comparative analysis of an obesity dataset to understand the factors contributing to obesity. It involves examining various attributes such as age, gender, physical activities, and dietary habits.
+This project aims to analyze a dataset related to obesity levels using various machine learning models. The dataset contains information about individuals' demographics, lifestyle habits, and family history related to obesity. The objective is to predict the obesity level of individuals based on these features.
 
-### Objectives
-- Explore the distribution and patterns within the obesity dataset.
-- Identify key factors contributing to obesity.
-- Compare different groups within the dataset (e.g., by gender, age).
-- Build predictive models to classify obesity levels based on the given features.
-- Provide actionable insights and recommendations based on the analysis.
+## Dataset Description
 
-### Data Sources
-The analysis utilizes two datasets:
-1. **ObesityDataSet_raw_and_data_sinthetic (1).csv**: Contains raw data with various features related to individuals' physical attributes and lifestyle choices, as well as their obesity levels.
-2. **Formatted_dataset.csv**: Processed version of the raw dataset with encoded categorical variables.
+The dataset consists of 2,111 entries and 17 columns. Here is an overview of each column:
 
-## Data Description
+- **Gender**: Gender of the individual
+- **Age**: Age of the individual
+- **Height**: Height of the individual
+- **Weight**: Weight of the individual
+- **family_history_with_overweight**: Indicates if a family member suffers from overweight
+- **FAVC**: Indicates if the individual frequently eats high-caloric food
+- **FCVC**: Indicates if the individual usually eats vegetables in their meals
+- **NCP**: Number of main meals the individual has daily
+- **CAEC**: Indicates if the individual eats food between meals
+- **SMOKE**: Indicates if the individual smokes
+- **CH2O**: Amount of water the individual drinks daily
+- **SCC**: Indicates if the individual monitors their daily calorie intake
+- **FAF**: Frequency of physical activity
+- **TUE**: Time spent using technological devices
+- **CALC**: Frequency of alcohol consumption
+- **MTRANS**: Mode of transportation usually used by the individual
+- **NObeyesdad**: Obesity level (Target Variable)
 
-### Key Features
-- **Age**: Age of the individual.
-- **Gender**: Gender of the individual.
-- **Height**: Height in meters.
-- **Weight**: Weight in kilograms.
-- **CALC**: Caloric intake frequency.
-- **FAVC**: Frequent consumption of high caloric food.
-- **FCVC**: Frequency of vegetable consumption.
-- **NCP**: Number of main meals.
-- **SCC**: Consumption of food between meals.
-- **SMOKE**: Smoking habits.
-- **CH2O**: Daily water intake.
-- **Family history with overweight**: Family history of being overweight.
-- **FAF**: Physical activity frequency.
-- **TUE**: Time using technology devices.
-- **CAEC**: Consumption of alcohol.
-- **MTRANS**: Transportation used.
-- **NObeyesdad**: Obesity level.
+## Project Structure
 
-## Data Preprocessing
+The analysis was conducted using four different machine learning models to predict obesity levels:
 
-### Steps
-- Handling missing values: Checked for missing values and imputed/removed as necessary.
-- Encoding categorical variables: Converted categorical variables into numeric form.
-- Normalizing numerical features: Scaled numerical features to a standard range.
-- Splitting the data: Split the dataset into training and testing sets.
+1. **K-Nearest Neighbors (KNN) Classifier**
+2. **Decision Tree Classifier**
+3. **Logistic Regression**
+4. **Random Forest Classifier**
 
-## Exploratory Data Analysis (EDA)
+### K-Nearest Neighbors (KNN) Classifier
 
-### Visualizations
-- Distribution of age, height, weight.
-- Obesity levels across different age groups and genders.
-- Correlation heatmap of features.
+- **Preprocessing**: Features were standardized to ensure they have a mean of 0 and a standard deviation of 1.
+- **Train-Test Split**: The dataset was split into 70% training and 30% testing sets.
+- **Accuracy**: The KNN classifier achieved an accuracy of 84.70%.
 
-### Key Insights
-- Distribution and trends observed from the visualizations.
-- Correlations between various features.
+### Decision Tree Classifier
 
-## Comparative Analysis
+- **Train-Test Split**: The dataset was split into 60% training and 40% testing sets.
+- **Accuracy**: The Decision Tree classifier achieved an accuracy of 92.43%.
 
-### Group Comparisons
-- Comparison of obesity levels between males and females.
-- Comparison of physical activity levels across different obesity categories.
+### Logistic Regression
 
-### Statistical Tests
-- Conducted t-tests or ANOVA to identify significant differences between groups.
+- **Preprocessing**: Features were standardized similar to the KNN model.
+- **Train-Test Split**: The dataset was split into 50% training and 50% testing sets.
+- **Accuracy**: The Logistic Regression model achieved an accuracy of 86.27%.
 
-## Modeling and Results
+### Random Forest Classifier
 
-### Models Used
-- **Random Forest**
-- **K-Nearest Neighbors**
-- **Logistic Regression**
-- **Decision Tree**
-
-### Performance Metrics
-- Accuracy
-- Precision
-- Recall
-- Confusion Matrix
-
-### Results
-- Comparison of model performance.
-- Best performing model and its interpretation.
+- **Train-Test Split**: The dataset was split into 60% training and 40% testing sets.
+- **Accuracy**: The Random Forest classifier achieved the highest accuracy of 95.62%.
 
 ## Conclusion
 
-### Summary of Findings
-- Key factors contributing to obesity identified from the analysis.
-- Insights gained from comparing different groups.
+This project demonstrates the application of different machine learning models to predict obesity levels based on a variety of features. The Random Forest classifier performed the best among the models tested, with an accuracy of 95.62%. This analysis provides insights into the factors influencing obesity and showcases the effectiveness of various classification algorithms in predicting obesity levels.
 
-### Recommendations
-- Suggested interventions based on analysis (e.g., promoting physical activities, dietary changes).
+## How to Use
 
-### Future Work
-- Further analysis with larger datasets.
-- Exploration of additional factors (e.g., genetic predispositions).
-- Development of targeted intervention programs.
+1. **Clone the Repository**: Clone the repository to your local machine using `git clone <repository-url>`.
+2. **Install Dependencies**: Install the necessary Python libraries using `pip install -r requirements.txt`.
+3. **Run the Analysis**: Execute the provided Jupyter notebooks or Python scripts to reproduce the analysis and predictions.
+
+## Future Work
+
+- **Hyperparameter Tuning**: Further improve model performance by tuning hyperparameters.
+- **Feature Engineering**: Explore additional feature engineering techniques to enhance model accuracy.
+- **Model Comparison**: Evaluate other machine learning models and ensemble methods to potentially achieve better results.
+
+
+
